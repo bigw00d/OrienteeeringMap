@@ -7,7 +7,6 @@ Android application of Orienteering
 
 <img width="25%" src="./overview.png" />
 
-
 ## Requirement
 
 * Using Android Studio 3.3.2
