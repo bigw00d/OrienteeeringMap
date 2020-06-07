@@ -30,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Mapbox.getInstance(this, "pk.eyJ1IjoiZGFpa2luZyIsImEiOiJja2FwMGxyeGMwMmgzMnFtZmpiM2pjazg4In0.N_z-_E3bUPFVl4b6Kgctpg");
-        Mapbox.getInstance(this, "pk.eyJ1IjoiZGFpa2luZyIsImEiOiJjand1MTlqNXYwMG85M3lsMjFib3pzejh0In0.J7eL4K-XH4_ojnMmkUqjHQ");
-//        Mapbox.getInstance(this, "pk.eyJ1IjoibG9vbmFpZmFjdG9yeSIsImEiOiJja2IxbXdwcDYwMjM3MnBxemNkZjFsZ2NhIn0.g81cED8lqDEN-XtKihAstQ");
+        Mapbox.getInstance(this, "USE YOUR ACCESS TOKEN");
 
         setContentView(R.layout.activity_main);
         mapView = findViewById(R.id.mapView);
@@ -41,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull MapboxMap mapboxMap) {
-                mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/daiking/ckb1jkdaq09t61imyb600c2zq"));
-//                mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/loonaifactory/ckb1qr6l70gpg1gmyv3awz32r"));
+                mapboxMap.setStyle(new Style.Builder().fromUri("USE YOUR STYLE"));
                 LatLng point = new LatLng(34.894671, 135.806347);
                 LatLng point2 = new LatLng(34.891934, 135.811271);
                 LatLng point3 = new LatLng(34.890966, 135.815450);
