@@ -1,6 +1,5 @@
 package com.bigw00d.mapapp;
 
-//import android.support.v7.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Mapbox.getInstance(this, "USE YOUR ACCESS TOKEN");
+        Mapbox.getInstance(this, "pk.eyJ1IjoiZGFpa2luZyIsImEiOiJja2I1bmlwb2UwcmdkMnNvNmhiNDhpenVnIn0.4jN5zspYyT9ADaTUnXIwLg");
 
         setContentView(R.layout.activity_main);
         mapView = findViewById(R.id.mapView);
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull MapboxMap mapboxMap) {
-                mapboxMap.setStyle(new Style.Builder().fromUri("USE YOUR STYLE"));
+                mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/daiking/ckb1sazd80i9e1jteg3sx3uqm"));
                 LatLng point = new LatLng(34.894671, 135.806347);
                 LatLng point2 = new LatLng(34.891934, 135.811271);
                 LatLng point3 = new LatLng(34.890966, 135.815450);
@@ -77,9 +76,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public View getInfoWindow(Marker marker) {
-//                String title = marker.getTitle();
-//                TextView textViewTitle = (TextView) infoWindow.findViewById(R.id.title);
-//                textViewTitle.setText(title);
 
             String snippet = marker.getSnippet();
             TextView textViewSnippet = (TextView) infoWindow.findViewById(R.id.snippet);
